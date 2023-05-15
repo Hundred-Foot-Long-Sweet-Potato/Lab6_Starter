@@ -120,12 +120,12 @@ class RecipeCard extends HTMLElement {
 
     // A6. TODO - Select the <article> we added to the Shadow DOM in the constructor
     let ele = this.shadowRoot.childNodes[0];
-    //console.log(data.imgSrc);
+    console.log(`"/assets/images/icons/${data.rating}-star.svg"`);
     // A7. TODO - Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
-    ele.innerHTML = `<img src=${data.imgSrc}"
+    ele.innerHTML = `<img src="${data.imgSrc}"
     alt=${data.imgAlt}>
   <p class="title">
     <a href="${data.titleLnk}">${data.titleTxt}</a>
@@ -133,7 +133,7 @@ class RecipeCard extends HTMLElement {
   <p class="organization">${data.organization}</p>
   <div class="rating">
     <span>${data.rating}</span>
-    <img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
+    <img src="./assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
     <span>(${data.numRatings})</span>
   </div>
   <time>${data.lengthTime}</time>
